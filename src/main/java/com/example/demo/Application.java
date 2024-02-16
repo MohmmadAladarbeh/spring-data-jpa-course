@@ -14,18 +14,18 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-    @Bean
-    CommandLineRunner commandLineRunner(StudentRepository studentRepository){
-        return args ->{
-
-            Student nadeen = new Student(
-                    "nadeen",
-                    "Alaraj",
-                    "Email.aa@da",
-                    24
-            );
-            studentRepository.save(nadeen);
-        };
-    }
+//    @Bean
+//    CommandLineRunner commandLineRunner(StudentRepository studentRepository){
+//        return args ->{
+//
+//            Student nadeen = new Student(
+//                    "nadeen",
+//                    "Alaraj",
+//                    "Email.aa@da",
+//                    24
+//            );
+//            studentRepository.save(nadeen);
+//        };
+//    }
 
 }
