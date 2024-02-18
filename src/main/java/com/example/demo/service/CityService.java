@@ -45,8 +45,13 @@ public class CityService {
 
     /**
      * @Transactional: This annotation ensures that the method runs within a transaction context.
-     * Spring will start and manage a transaction for the duration of the method execution,
-     * allowing the update query to be executed within the transactional context.
+       Spring will start and manage a transaction for the duration of the method execution,
+       allowing the update query to be executed within the transactional context.
+     */
+    /**
+     * If an exception occurred in the code after the line cityRepository.update(title, body, cityId), 
+       the transaction of updateing offerEntity which has been already completed will be rolled back 
+       and the database will be at a consistent state.
      */
     @Transactional
     public int update(String title, String body, Long cityId) throws Exception {
